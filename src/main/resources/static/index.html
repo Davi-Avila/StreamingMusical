@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Streaming Musical</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Cadastro de Músicas</h1>
 <p>Cadastre a nova música abaixo:</p>
-<input type="text" id="nome" placeholder="Nome">
-<input type="text" id="artista" placeholder="Artista">
-<input type="text" id="genero" placeholder="Gênero">
-<input type="number" id="duracao" placeholder="Duração">
-<input type="number" id="ano" placeholder="Ano">
-<input type="text" id="isbn" placeholder="ISBN">
 
-<button onclick="salvar()">Postar Música</button>
+<div class = "formulario">
+    <input class = "form" type="text" id="nome" placeholder="Nome">
+    <input class = "form" type="text" id="artista" placeholder="Artista">
+    <input class = "form" type="text" id="genero" placeholder="Gênero">
+    <input class = "form" type="number" id="duracao" placeholder="Duração">
+    <input class = "form" type="number" id="ano" placeholder="Ano">
 
-<h2>Lista de Músicas</h2>
-<ul id="lista"></ul>
+    <button class = "form" onclick="salvar()">Postar Música</button>
+</div>
+
+<div class = "lista">
+    <h2>Lista de Músicas</h2>
+    <ul id="lista"></ul>
+</div>
 
 <script src="script.js"></script>
 

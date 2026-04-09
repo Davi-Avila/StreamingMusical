@@ -1,14 +1,14 @@
-const url = "http://localhost:8080/livraria";
+const url = "http://localhost:8080/musicas";
 function salvar(){
-    const livro = {
+    const musica = {
         nome: document.getElementById("nome").value,
         artista: document.getElementById("artista").value,
-        preco: parseFloat(document.getElementById("preco").value),
-        estoque: parseInt(document.getElementById("estoque").value),
-        isbn: document.getElementById("isbn").value
+        genero: document.getElementById("genero").value,
+        duracao: parseFloat(document.getElementById("duracao").value),
+        ano: parseInt(document.getElementById("ano").value),
     };
 
-    fetch (url, {method: "POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(livro)}).then(() => listar());
+    fetch (url, {method: "POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(musica)}).then(() => listar());
 }
 
 function listar(){
@@ -18,10 +18,10 @@ function listar(){
         const lista = document.getElementById("lista");
         lista.innerHTML = "";
 
-    dados.forEach(livro => {
-    const li = document.createElement("li");
-    li.innerText = `${livro.titulo} - ${livro.autor} - ${livro.preco}`;
-    lista.appendChild(li);
+    dados.forEach(musica => {
+    const mu = document.createElement("mu");
+    mu.innerText = `${musica.nome} - ${musica.artista} - ${musica.genero}`;
+    lista.appendChild(mu);
     });
     });
 }
